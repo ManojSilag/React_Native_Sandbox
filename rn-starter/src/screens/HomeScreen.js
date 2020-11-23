@@ -1,7 +1,24 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
-const HomeScreen = () => {
-  return <Text style={styles.text}>Manoj Silag</Text>;
+import { Text, StyleSheet, Button, View, TouchableOpacity } from "react-native";
+
+const HomeScreen = (props) => {
+  const { navigate } = props.navigation;
+  return (
+    <View>
+      <Text style={styles.text}>Manoj Silag</Text>
+      <Button
+        style={styles.button}
+        title="Go to Components Demo"
+        onPress={() => navigate("Components")}
+      />
+
+      <Button
+        style={styles.button}
+        title="Go to List Demo"
+        onPress={() => navigate("List")}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -9,6 +26,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "blue",
     textAlign: "center"
+  },
+  button: {
+    margin: "20px",
+    backgroundColor:"pink"
   }
 });
 
