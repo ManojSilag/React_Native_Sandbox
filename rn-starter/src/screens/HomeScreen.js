@@ -19,11 +19,22 @@ const HomeScreen = (props) => {
       />
 
       <Button
-      style={styles.button}
-      title="Go to Image Demo"
-      onPress={() => navigate("Image")}
-    />
+        style={styles.button}
+        title="Go to Image Demo"
+        onPress={() => navigate("Image")}
+      />
 
+      <Button
+        style={styles.button}
+        title="Go to Counter Demo"
+        onPress={() => navigate("Counter")}
+      />
+
+      <Button
+        style={styles.button}
+        title="Go to Color Demo"
+        onPress={() => navigate("Color")}
+      />
     </View>
   );
 };
@@ -36,7 +47,7 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: "20px",
-    backgroundColor:"pink"
+    backgroundColor: "pink"
   }
 });
 
