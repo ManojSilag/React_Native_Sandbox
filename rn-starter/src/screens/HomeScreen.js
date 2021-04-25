@@ -7,48 +7,64 @@ const HomeScreen = (props) => {
     <View>
       <Text style={styles.text}>Manoj Silag</Text>
       <Button
-        style={styles.button}
         title="Go to Components Demo"
+        color={randomRgb()}
         onPress={() => navigate("Components")}
       />
 
-      <Button
-        style={styles.button}
-        title="Go to List Demo"
-        onPress={() => navigate("List")}
-      />
+      <Button title="Go to List Demo" onPress={() => navigate("List")} />
 
       <Button
-        style={styles.button}
         title="Go to Image Demo"
+        color={randomRgb()}
         onPress={() => navigate("Image")}
       />
 
       <Button
-        style={styles.button}
         title="Go to Counter Demo"
+        color={randomRgb()}
         onPress={() => navigate("Counter")}
       />
 
       <Button
-        style={styles.button}
         title="Go to Color Demo"
+        color={randomRgb()}
         onPress={() => navigate("Color")}
+      />
+
+      <Button
+        title="Go to Square Demo"
+        color={randomRgb()}
+        onPress={() => navigate("Square")}
+      />
+
+      <Button
+        title="Go to Text Input Demo"
+        color={randomRgb()}
+        onPress={() => navigate("Text")}
       />
     </View>
   );
+};
+
+const randomRgb = () => {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red},${green},${blue})`;
 };
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     color: "blue",
-    textAlign: "center"
+    textAlign: "center",
   },
   button: {
-    margin: "20px",
-    backgroundColor: "pink"
-  }
+    // marginTop: "20px",
+    backgroundColor: "pink",
+    // margin: '18px'
+  },
 });
 
 export default HomeScreen;

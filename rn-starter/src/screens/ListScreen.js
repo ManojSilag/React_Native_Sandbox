@@ -12,12 +12,12 @@ const ListScreen = () => {
     { name: "FNAME7", age: 7 },
     { name: "FNAME8", age: 8 },
     { name: "FNAME9", age: 9 },
-    { name: "FNAME10", age: 10 }
+    { name: "FNAME10", age: 10 },
   ];
   return (
     <FlatList
       data={friends}
-      horizontal={false}
+      horizontal={false} // If true, renders items next to each other horizontally instead of stacked vertically.
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       keyExtractor={(friend) => friend.name}
@@ -36,7 +36,7 @@ const ListScreen = () => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    marginVertical: 50
-  }
+    marginVertical: 50,
+  },
 });
 export default ListScreen;
