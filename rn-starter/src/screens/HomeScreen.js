@@ -43,6 +43,12 @@ const HomeScreen = (props) => {
         color={randomRgb()}
         onPress={() => navigate("Text")}
       />
+
+      <Button
+        title="Go to Box Demo"
+        color={randomRgb()}
+        onPress={() => navigate("Box")}
+      />
     </View>
   );
 };
